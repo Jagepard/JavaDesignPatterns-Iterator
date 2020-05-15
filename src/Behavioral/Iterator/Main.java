@@ -11,14 +11,14 @@ public class Main {
 
         ClientInterface client = new Client();
 
-        client.addItemToTheBucket(new Item("Колготки", 150, "штопаные"));
-        client.addItemToTheBucket(new Item("Мясо", 250, "тухлое"));
-        client.addItemToTheBucket(new Item("Батон", 40, ""));
+        client.addItemToTheBucket(new Item("Tights", 150, "darned"));
+        client.addItemToTheBucket(new Item("Meat", 250, "rotten"));
+        client.addItemToTheBucket(new Item("Bread", 40, ""));
 
         IteratorInterface employee = new Iterator(client.getBucket());
 
         try {
-            employee.iterateItems();
+            System.out.println(employee.iterateItems());
         } catch (Exception e) {
             System.out.printf("Caught exception: %s \n", e.getLocalizedMessage());
         }
