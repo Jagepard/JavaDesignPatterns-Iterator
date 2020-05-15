@@ -9,16 +9,20 @@ import java.util.List;
 
 public class Iterator implements IteratorInterface{
 
-    private List<ItemInterface> bucket;
+    private final List<ItemInterface> bucket;
 
     public Iterator(List<ItemInterface> bucket) {
         this.bucket = bucket;
     }
 
     @Override
-    public void iterateItems() {
+    public String iterateItems() {
+        StringBuilder output = new StringBuilder();
+
         for (ItemInterface item : bucket) {
-            System.out.printf("%s Цена: %s у.е. %s \n", item.getName(), item.getPrice(), item.getDescription());
+            output.append(String.format("%s %s %s\n", item.getName(), item.getPrice(), item.getDescription()));
         }
+
+        return output.toString();
     }
 }

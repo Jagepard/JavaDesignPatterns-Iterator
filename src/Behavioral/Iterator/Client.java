@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Client implements ClientInterface {
 
-    private List<ItemInterface> bucket = new ArrayList<>();
+    private final List<ItemInterface> bucket = new ArrayList<>();
 
     @Override
     public List<ItemInterface> getBucket() {

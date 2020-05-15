@@ -7,9 +7,9 @@ package Behavioral.Iterator;
 
 public class Item implements ItemInterface{
 
-    private String name;
-    private int    price;
-    private String description;
+    private final String name;
+    private final int    price;
+    private final String description;
 
     public Item(String name, int price, String description) {
         this.name        = name;

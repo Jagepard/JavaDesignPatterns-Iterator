@@ -6,5 +6,5 @@
 package Behavioral.Iterator;
 
 public interface IteratorInterface {
-    public void iterateItems();
+    public String iterateItems();
 }
